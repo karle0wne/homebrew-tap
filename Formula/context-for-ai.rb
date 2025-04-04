@@ -2,7 +2,7 @@ class ContextForAi < Formula
   desc "Generate a structured Markdown summary of your codebase for AI or documentation"
   homepage "https://github.com/karle0wne/context-for-ai"
   url "https://github.com/karle0wne/context-for-ai/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "773b9e99458738754a3c7b591d58bffd4b532a096921ea5530ce5154dcbb2ca3"
+  sha256 "86c21184b171dfdb2c136dfd9b3a277e7fd690491ffc634e7c9f65cb66a94cdd"
   license "MIT"
 
   def install
