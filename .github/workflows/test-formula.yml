@@ -13,17 +13,17 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: 🧾 Checkout tap repo
+      - name: 📥 Checkout tap
         uses: actions/checkout@v4
 
-      - name: 🍺 Set up Homebrew
+      - name: 🧪 Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: 🔎 Audit formula
+      - name: 🔎 Audit the formula
         run: brew audit --strict --online Formula/context-for-ai.rb
 
-      - name: 🧪 Install formula
+      - name: 🍺 Install the formula
         run: brew install --build-from-source Formula/context-for-ai.rb
 
-      - name: ⚙️ Run installed binary
+      - name: ⚙️ Test installed CLI
         run: context-for-ai --version

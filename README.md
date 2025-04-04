@@ -1,5 +1,7 @@
 # 🍺 Homebrew Tap for context-for-ai
 
+[![Homebrew Tap](https://img.shields.io/badge/homebrew-tap-blue)](https://github.com/karle0wne/homebrew-tap)
+
 This is the official Homebrew Tap for the [`context-for-ai`](https://github.com/karle0wne/context-for-ai) CLI tool.
 
 ---
@@ -21,22 +23,30 @@ context-for-ai --help
 
 ---
 
+## 📄 Example Output
+
+See this example to understand what this CLI generates:
+
+👉 [Sample Markdown Output](https://github.com/karle0wne/context-for-ai/blob/main/examples/sample-output.md)
+
+---
+
 ## 🧠 About
 
-`context-for-ai` is a CLI tool that generates a structured Markdown snapshot of your Kotlin/Java project, including:
+`context-for-ai` is a CLI tool that generates a Markdown snapshot of your Kotlin/Java project, including:
 
-- directory structure
-- code files
-- project stats
-- extra configs
-- optional prompt for AI analysis
+- 📁 directory structure
+- 📄 source code blocks
+- 📊 statistics
+- ⚙️ config files
+- 💬 prompt for AI input
 
-Perfect for documentation, onboarding, or AI-assisted development.
+Use it for documentation, onboarding, code analysis — or as context for any AI assistant.
 
 ---
 
 ## 🔁 Updates
 
-The formula is automatically updated with every new GitHub Release from the [main project](https://github.com/karle0wne/context-for-ai).
+The formula is automatically updated on each new release of [`context-for-ai`](https://github.com/karle0wne/context-for-ai).
 
 Maintained by [@karle0wne](https://github.com/karle0wne)
