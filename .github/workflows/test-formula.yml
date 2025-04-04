@@ -1,0 +1,29 @@
+name: Test Homebrew Formula
+
+on:
+  push:
+    paths:
+      - 'Formula/**'
+  pull_request:
+    paths:
+      - 'Formula/**'
+
+jobs:
+  test-formula:
+    runs-on: macos-latest
+
+    steps:
+      - name: 🧾 Checkout tap repo
+        uses: actions/checkout@v4
+
+      - name: 🍺 Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: 🔎 Audit formula
+        run: brew audit --strict --online Formula/context-for-ai.rb
+
+      - name: 🧪 Install formula
+        run: brew install --build-from-source Formula/context-for-ai.rb
+
+      - name: ⚙️ Run installed binary
+        run: context-for-ai --version
