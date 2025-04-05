@@ -7,23 +7,29 @@ on:
   pull_request:
     paths:
       - 'Formula/**'
-
 jobs:
-  test-formula:
-    runs-on: macos-latest
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, macos-14]
+    runs-on: ${{ matrix.os }}
 
     steps:
-      - name: 📥 Checkout tap
-        uses: actions/checkout@v4
+      - name: 🧾 Show OS info
+        run: uname -a
 
-      - name: 🧪 Set up Homebrew
+      - name: 🍺 Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: 🔎 Audit the formula
-        run: brew audit --strict --online Formula/context-for-ai.rb
+      - name: ➕ Add this tap
+        run: brew tap karle0wne/homebrew-tap
 
       - name: 🍺 Install the formula
-        run: brew install --build-from-source Formula/context-for-ai.rb
+        run: brew install karle0wne/homebrew-tap/context-for-ai
+
+      - name: 🔎 Audit the formula (only macOS)
+        if: runner.os == 'macOS'
+        run: brew audit --strict --online context-for-ai
 
       - name: ⚙️ Test installed CLI
         run: context-for-ai --version
