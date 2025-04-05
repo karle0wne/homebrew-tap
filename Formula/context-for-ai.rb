@@ -1,10 +1,10 @@
 class ContextForAi < Formula
   desc "CLI tool to describe your project and generate structured AI prompts"
   homepage "https://github.com/karle0wne/context-for-ai"
-  url "https://github.com/karle0wne/context-for-ai/releases/download/v1.0.1/context-for-ai.tar.gz"
-  sha256 "d985e59bd4f1b4d091d20e5f66585addb1b85d20efb447714f902017ea3797aa"
+  url "https://github.com/karle0wne/context-for-ai/releases/download/v1.0.2/context-for-ai.tar.gz"
+  sha256 "0a95787ed85c385e150f78630025bc480ea3600c7f2c54e3a38afdd1b3dd5c4f"
   license "MIT"
-  version "1.0.1"
+  version "1.0.2"
 
   def install
     bin.install "bin/context-for-ai"
